@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 
+// Styles
+import './assets/css/basic.css'
+import './assets/css/layout.css'
+import './assets/css/magnific-popup.css'
+import './assets/css/animate.css'
+import './assets/css/jarallax.css'
+import './assets/css/swiper.css'
+import './assets/css/fontawesome.css'
+import Main from './components/Main/Main';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main/>
     </div>
   );
 }
