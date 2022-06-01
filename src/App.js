@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
+import React from 'react'
 // Styles
 import './assets/css/basic.css'
 import './assets/css/layout.css'
@@ -13,8 +13,8 @@ import Main from './components/Main/Main';
 
 function App() {
   return (
-    <div className="App">
-      <Main/>
+    <div>
+      <Main />
     </div>
   );
 }
