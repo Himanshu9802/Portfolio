@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -28,6 +28,7 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +36,18 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.control-arrow{
+  /* background-color: red !important; */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white !important;
+}
+
+.control-arrow::before{
+  vertical-align: text-top;
+  color: #fff !important;
 }

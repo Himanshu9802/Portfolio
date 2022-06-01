@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Portfolio" />
     <meta name="keywords" content="freelancer, web developer, developer, personal portfolio, cv, frontend developer, portfolio, react, html, css, bootstrap" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#FFD24C" />
     <meta
       name="description"
       content="Fontend Developer personal portfolio"
@@ -31,6 +31,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
+	<link rel="stylesheet" href="./assets/css/basic.css" />
+	<link rel="stylesheet" href="./assets/css/layout.css" />
+	<link rel="stylesheet" href="./assets/css/magnific-popup.css" />
+	<link rel="stylesheet" href="./assets/css/animate.css" />
+	<link rel="stylesheet" href="./assets/css/jarallax.css" />
+	<link rel="stylesheet" href="./assets/css/swiper.css" />
+	<link rel="stylesheet" href="./assets/css/fontawesome.css" />
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
     <title>Portfolio</title>
   </head>
   <body>
@@ -47,4 +58,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    const sliderChild = document.getElementsById('owl-carousel');
+    sliderChild.closest('.carousel-slider').classList.add('navs')
+  </script>
 </html>
