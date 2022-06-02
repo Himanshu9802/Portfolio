@@ -1076,7 +1076,7 @@
 	top: 0;
 	position: absolute;
 	height: 2px;
-	width: 0%;
+	width: 100%;
 	background: #FFD24C;
 	transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;

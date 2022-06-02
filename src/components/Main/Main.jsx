@@ -11,6 +11,9 @@ import self from "../../assets/images/self.webp";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
 const Main = () => {
   return (
     <div className="home">
@@ -781,11 +784,28 @@ const Main = () => {
               <div className="skills circles">
                 <ul>
                   <li>
+                  <div class="progress p90"> 
+                    <CircularProgressbar value={80} text={`${80}%`} 
+                       styles={buildStyles({
+                        pathColor: `rgb(255, 210, 76)`,
+                        trailColor: '#585d65',
+                      })}
+                    />
+									<div class="percentage"></div>
+									<span>80%</span>
+								</div>
+								<div class="name">WordPress</div>
+								<div class="single-post-text">
+									<p>
+										Etiam sit amet orci eget eros faucibus tincidunt.
+									</p>
+								</div>
+                  </li>
+                  <li>
                     <div className="progress p90">
-                      {" "}
                       {/*<!-- p90 = 90% circle fill color -->*/}
                       <div className="percentage"></div>
-                      <span>90%</span>
+                      <span>80%</span>
                     </div>
                     <div className="name">WordPress</div>
                     <div className="single-post-text">
