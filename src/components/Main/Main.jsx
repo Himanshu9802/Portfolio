@@ -2,16 +2,25 @@ import React from "react";
 import Header from "../Header/Header";
 // import Typewriter from "typewriter-effect";
 
-import self from "../../assets/images/self.webp";
 
-// import OwlCarousel from 'react-owl-carousel';  
-// import 'owl.carousel/dist/assets/owl.carousel.css';  
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
-
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 
+import CodingSkills from "../CodingSkills/CodingSkills";
+import CircularProgress from "../reusables/CircularProgress/CircularProgress";
+
+
 const Main = () => {
+
+  const nextCarousel = (e) => {
+    //window.alert('calling');
+    document.querySelector('#customCarousel .control-next').click();
+  }
+  const prevCarousel = (e) => {
+    //window.alert('calling');
+    document.querySelector('#customCarousel .control-prev').click();
+  }
+
   return (
     <div className="home">
       {/* <!-- Preloader --> */}
@@ -40,7 +49,7 @@ const Main = () => {
             <div className="background-filter circle">
               <div
                 className="background-img"
-                style={{ backgroundImage: `url(${self})` }}
+                style={{ backgroundImage: "url('/images/self.webp')" }}
               ></div>
             </div>
           </div>
@@ -325,7 +334,7 @@ const Main = () => {
 
               <div className="content-carousel">
                 <div className="owl-carousel" id="owl-carousel">
-                  <Carousel  showStatus={false} showIndicators={false} swipeable={true}>
+                  <Carousel  showStatus={false} showIndicators={false} swipeable={true} showArrows={false} infiniteLoop={true}>
                     <div className="item">
                       <div className="pricing-item">
                         <div className="icons">
@@ -427,8 +436,8 @@ const Main = () => {
 
                 {/* <!-- navigation --> */}
                 <div className="navs">
-                  <span className="prev fas fa-chevron-left" aria-label="previous slide / item"></span>
-                  <span className="next fas fa-chevron-right"  aria-label="next slide / item"></span>
+                  <span className="prev fas fa-chevron-left" onClick={()=>prevCarousel()} aria-label="previous slide / item"></span>
+                  <span className="next fas fa-chevron-right" onClick={()=>nextCarousel()}  aria-label="next slide / item"></span>
                 </div>
               </div>
             </div>
@@ -627,71 +636,12 @@ const Main = () => {
             <div className="content">
               {/* <!-- title --> */}
               <div className="titles">
-                <div className="title">Design Skills</div>
-                <div className="subtitle">Creative ability</div>
+                <div className="title">Coding Skills</div>
+                <div className="subtitle">Developing on</div>
               </div>
 
               {/* <!-- skills items --> */}
-              <div className="skills percent">
-                <ul>
-                  <li>
-                    <div className="name">Web Layout</div>
-                    <div className="single-post-text">
-                      <p>
-                        Etiam sit amet orci eget eros faucibus tincidunt. Duis
-                        leo. Sed fringilla mauris sit amet nibh.
-                      </p>
-                    </div>
-                    <div className="progress">
-                      <div className="percentage" style={{ width: "90%" }}>
-                        <span className="percent">90%</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="name">Illustrations</div>
-                    <div className="single-post-text">
-                      <p>
-                        Etiam sit amet orci eget eros faucibus tincidunt. Duis
-                        leo. Sed fringilla mauris sit amet nibh.
-                      </p>
-                    </div>
-                    <div className="progress">
-                      <div className="percentage" style={{ width: "70%" }}>
-                        <span className="percent">70%</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="name">Photoshop</div>
-                    <div className="single-post-text">
-                      <p>
-                        Etiam sit amet orci eget eros faucibus tincidunt. Duis
-                        leo. Sed fringilla mauris sit amet nibh.
-                      </p>
-                    </div>
-                    <div className="progress">
-                      <div className="percentage" style={{ width: "95%" }}>
-                        <span className="percent">95%</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="name">Graphic Design</div>
-                    <div className="single-post-text">
-                      <p>
-                        Etiam sit amet orci eget eros faucibus tincidunt. Duis
-                        leo. Sed fringilla mauris sit amet nibh.
-                      </p>
-                    </div>
-                    <div className="progress">
-                      <div className="percentage" style={{ width: "85%" }}>
-                        <span className="percent">85%</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <CodingSkills/>
             </div>
           </div>
 
@@ -781,76 +731,19 @@ const Main = () => {
               <div className="skills circles">
                 <ul>
                   <li>
-                    <div className="progress p90">
-                      {" "}
-                      {/*<!-- p90 = 90% circle fill color -->*/}
-                      <div className="percentage"></div>
-                      <span>90%</span>
-                    </div>
-                    <div className="name">WordPress</div>
-                    <div className="single-post-text">
-                      <p>Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                    </div>
+                    <CircularProgress percent={'99'} language={"HTML 5"}  />
                   </li>
                   <li>
-                    <div className="progress p75">
-                      {" "}
-                      {/*<!-- p75 = 75% circle fill color -->*/}
-                      <div className="percentage"></div>
-                      <span>75%</span>
-                    </div>
-                    <div className="name">PHP, MYSQL</div>
-                    <div className="single-post-text">
-                      <p>Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                    </div>
+                    <CircularProgress percent={'99'} language={"CSS"} />
                   </li>
                   <li>
-                    <div className="progress p85">
-                      {" "}
-                      {/*<!-- p85 = 85% circle fill color -->*/}
-                      <div className="percentage"></div>
-                      <span>85%</span>
-                    </div>
-                    <div className="name">JavaScript</div>
-                    <div className="single-post-text">
-                      <p>Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                    </div>
+                    <CircularProgress percent={'99'} language={"Bootstrap"} />
                   </li>
                   <li>
-                    <div className="progress p80">
-                      {" "}
-                      {/*<!-- p80 = 80% circle fill color -->*/}
-                      <div className="percentage"></div>
-                      <span>80%</span>
-                    </div>
-                    <div className="name">Angular</div>
-                    <div className="single-post-text">
-                      <p>Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                    </div>
+                    <CircularProgress percent={'70'} language={"React"} />
                   </li>
                   <li>
-                    <div className="progress p95">
-                      {" "}
-                      {/*<!-- p95 = 95% circle fill color -->*/}
-                      <div className="percentage"></div>
-                      <span>95%</span>
-                    </div>
-                    <div className="name">HTML, CSS</div>
-                    <div className="single-post-text">
-                      <p>Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="progress p90">
-                      {" "}
-                      {/*<!-- p90 = 90% circle fill color -->*/}
-                      <div className="percentage"></div>
-                      <span>90%</span>
-                    </div>
-                    <div className="name">Python</div>
-                    <div className="single-post-text">
-                      <p>Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                    </div>
+                    <CircularProgress percent={'80'} language={"Wordpress"} />
                   </li>
                 </ul>
               </div>
@@ -867,12 +760,8 @@ const Main = () => {
               </div>
 
               {/* <!-- testimonials items --> */}
-              <div className="content-carousel">
-                <div
-                  className="owl-carousel"
-                  data-slidesview="2"
-                  data-slidesview_mobile="1"
-                >
+              <div className="content-carousel" id="customCarousel">
+              <Carousel  showStatus={false} showIndicators={false} swipeable={true} showArrows={false} infiniteLoop={true}>
                   <div className="item">
                     <div className="reviews-item">
                       <div className="image">
@@ -940,12 +829,11 @@ const Main = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-
+              </Carousel>
                 {/* <!-- navigation --> */}
                 <div className="navs">
-                  <span className="prev fas fa-chevron-left"></span>
-                  <span className="next fas fa-chevron-right"></span>
+                  <span className="prev fas fa-chevron-left" onClick={prevCarousel}></span>
+                  <span className="next fas fa-chevron-right" onClick={nextCarousel}></span>
                 </div>
               </div>
             </div>
