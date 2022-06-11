@@ -1,7 +1,9 @@
-import React from "react";
-import {NavLink} from "react-router-dom"
+import React, { useRef } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Header() {
+  const divRef = useRef(null);
+  const scrollToElement = () => divRef.current.scrollIntoView();
   return (
     <header className="header">
       {/* <!-- Header --> */}
@@ -37,40 +39,89 @@ function Header() {
           <div className="top-menu-nav">
             <div className="menu-topmenu-container">
               <ul className="menu">
-                <li className="menu-item current-menu-item">
-                  <a href="#">
-                    <span className="animated-button">
-                      <span>Home</span>
-                    </span>
-                  </a>
+                <li className="menu-item">
+                  <Link
+                    activeClass="current-menu-item"
+                    to="Home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    Home
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#section-about">
-                    <span className="animated-button">
-                      <span>About</span>
-                    </span>
-                  </a>
+                  <Link
+                    activeClass="current-menu-item"
+                    to="About"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    About
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#section-experience">
-                    <span className="animated-button">
-                      <span>Resume</span>
-                    </span>
-                  </a>
+                  <Link
+                    activeClass="current-menu-item"
+                    to="Resume"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    Resume
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#section-portfolio">
-                    <span className="animated-button">
-                      <span>Portfolio</span>
-                    </span>
-                  </a>
+                  <Link
+                    activeClass="current-menu-item"
+                    to="Education"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    Education
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#section-contacts">
-                    <span className="animated-button">
-                      <span>Contact</span>
-                    </span>
-                  </a>
+                  <Link
+                    activeClass="current-menu-item"
+                    to="Coding"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    Skills
+                  </Link>
+                </li>
+                <li className="menu-item">
+                  <Link
+                    activeClass="current-menu-item"
+                    to="Portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+                <li className="menu-item">
+                  <Link
+                    activeClass="current-menu-item"
+                    to="Contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={600}
+                  >
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -9,7 +9,7 @@ const LinedProgress = (props) => {
 
   return (
     <div className="codingCard">
-      <img src={icon} alt="" height={90} />
+      <img src={icon} alt="" height={70} />
       <div className="name">{title}</div>
       <div className="progress">
         <div className="percentage" style={{ width: `${progress}%` }}>
