@@ -332,9 +332,9 @@
 		padding: 0 30px;
 		left: 0;
 		right: 0;
-		top: 20px;
+		top: 0;
+		background-color: #3a3e44;
 		height: 80px;
-		background: none;
 		border-radius: 0;
 		-moz-border-radius: 0;
 		-webkit-border-radius: 0;
@@ -573,7 +573,7 @@
 }
 
 .section:last-child {
-	border-bottom: none;
+	/* border-bottom: none; */
 }
 
 .section .content {
@@ -3125,7 +3125,7 @@ iframe, object {
   
   .choosecard {
 	/* display: flex; */
-	height: 350px;
+	height: 390px;
 	width: 270px;
 	background-color: #17141d;
 	border-radius: 10px;
@@ -3167,5 +3167,9 @@ iframe, object {
 	justify-content:center;
 	width:100%;
 	align-items:center;
+  }
+
+  .education-date .date{
+	font-size: 15px;
   }
   

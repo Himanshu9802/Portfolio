@@ -1,7 +1,6 @@
 import React from 'react'
 import CardYears from "../reusables/CardwithYears/CardYears";
 
-
 const Experience = () => {
   return (
     <div className="section resume" id="Resume">
@@ -14,9 +13,9 @@ const Experience = () => {
 
         {/* <!-- education items --> */}
         <div className="content-carousel">
-          <div className="owl-carousel">
+          <div className="owl-carousel education-date">
             <CardYears
-              years="2015-2016"
+              years="Current"
               degree="Frontend Developer"
               university="VSHWAN, Ahmedabad"
               description="Working as a Frontend Developer."
@@ -24,30 +23,18 @@ const Experience = () => {
 
             <CardYears
               years="2021"
-              degree="Higher Secondary"
-              university="Kendriya Vidyalaya Sangathan(KVS)"
-              description="Etiam sit amet orci eget eros faucibus tincidunt. Duis
-                        leo. Sed fringilla mauris sit amet nibh. Donec sodales
-                        sagittis magna."
+              degree="Web Developer (Intern)"
+              university="Way To Web Pvt. Ltd., Ahmedabad"
+              description="Completed 6 Months Internship."
             />
 
             <CardYears
-              years="2016-2019"
-              degree="Bachelor of Computer Applications (B.C.A)"
-              university="Ganpat University"
-              description="Etiam sit amet orci eget eros faucibus tincidunt. Duis
-                        leo. Sed fringilla mauris sit amet nibh. Donec sodales
-                        sagittis magna."
+              years="2015"
+              degree="Wordpress Developer Intern"
+              university="Codepoets, Ahmedabad"
+              description="Worked as a Jr. Wordpress Developer."
             />
 
-            <CardYears
-              years="2019-2021"
-              degree="Master of Computer Applications (M.C.A)"
-              university="Ganpat University"
-              description="Etiam sit amet orci eget eros faucibus tincidunt. Duis
-                        leo. Sed fringilla mauris sit amet nibh. Donec sodales
-                        sagittis magna."
-            />
           </div>
         </div>
       </div>

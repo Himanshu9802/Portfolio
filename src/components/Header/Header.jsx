@@ -1,11 +1,15 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Header() {
-  const divRef = useRef(null);
-  const scrollToElement = () => divRef.current.scrollIntoView();
+  const [mobileMenu, setMobileMenu] = useState("")
+
+  const activeMenu = () => {
+    setMobileMenu(!mobileMenu)
+  }
+
   return (
-    <header className="header">
+    <header className={mobileMenu ? 'header active' : 'header'}>
       {/* <!-- Header --> */}
 
       {/* <!-- logo --> */}
@@ -20,7 +24,7 @@ function Header() {
       </div>
 
       {/* <!-- menu button --> */}
-      <a href="#" className="menu-btn">
+      <a href="#" className="menu-btn" onClick={activeMenu}>
         <span></span>
       </a>
 
