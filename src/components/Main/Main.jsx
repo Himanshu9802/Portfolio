@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 // import Typewriter from "typewriter-effect";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -11,6 +13,7 @@ import Education from "../Education/Education";
 import WhyChooseMe from "../WhyChooseMe/WhyChooseMe";
 import Footer from "../Footer/Footer";
 import Experience from "../Experience/Experience";
+import About from "../About/About";
 
 const Main = () => {
   const nextCarousel = (e) => {
@@ -95,106 +98,48 @@ const Main = () => {
 
                   {/* <!-- text --> */}
                   <div className="h-text">
-                    <u> Need Content</u>&nbsp; Hello! I am Web Developer from
-                    United States, New York. I have rich experience in web site
-                    design and building, also I am good at wordpress. I love to
-                    talk with you about our unique.
+                  Hello! I'm a Frontend Developer from Gujarat, India. I have an experience in designing and developing websites. Additionally, I am familiar in using React as part of my projects.
                   </div>
 
                   {/* <!-- button --> */}
-                  <a href="#" className="btn">
+                  <span className="btn">
                     <span className="animated-button">
-                      <span>Contact Me</span>
+                    <Link
+                    activeClass="current-menu-item"
+                    to="Contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={3000}
+                  >
+                    Contact Me
+                  </Link>
                     </span>
                     <i className="icon fas fa-chevron-right"></i>
-                  </a>
+                  </span>
 
                   {/* <!-- mouse button --> */}
-                  <a
-                    href="#"
+                  <span
                     className="btn mouse-btn"
-                    style={{ display: "none" }}
+                  >
+                    <Link
+                    activeClass="current-menu-item"
+                    to="About"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000}
                   >
                     <i className="icon fas fa-chevron-down"></i>
-                  </a>
+                  </Link>
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* <!-- Section About --> */}
-          <div className="section about" id="About">
-            <div className="content">
-              {/* <!-- title --> */}
-              <div className="titles">
-                <div className="title">About Me</div>
-                <div className="subtitle">My story</div>
-              </div>
-
-              {/* <!-- text --> */}
-              <div className="cols">
-                <div className="col">
-                  <div className="single-post-text">
-                    <p>
-                      Hi there, I have completed my graduation in BCA(Bachelors
-                      of Computer Applications), currently I am a pursuing
-                      MCA(Masters Of Computer Application) from Ganpat
-                      University, Ahmedabad, Gujarat. I have also worked in firm
-                      as Jr.Wordpress Developer, after leaving that job I have
-                      started working as a Freelance Web Developer. I am very
-                      passionate about learning new technologies & creating web
-                      sites.
-                    </p>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="single-post-text">
-                    <p>
-                      Pellentesque posuere. Praesent turpis. Aenean posuere,
-                      tortor sed cursus feugiat, nunc augue blandit nunc, eu
-                      sollicitudin urna dolor sagittis lacus.
-                    </p>
-                  </div>
-                </div>
-                <div className="col col-full">
-                  <div className="single-post-text">
-                    <p>
-                      Pellentesque posuere. Praesent turpis. Aenean posuere,
-                      tortor sed cursus feugiat, nunc augue blandit nunc, eu
-                      sollicitudin urna dolor sagittis lacus. Donec elit libero,
-                      sodales nec, volutpat a, suscipit non, turpis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- info list --> */}
-              <div className="info-list">
-                <ul>
-                  <li>
-                    <strong>Age:</strong> 24
-                  </li>
-                  <li>
-                    <strong>Residence:</strong> India
-                  </li>
-                  <li>
-                    <strong>Freelance:</strong> Available
-                  </li>
-                  <li>
-                    <strong>Address:</strong> Ahmedabad, Gujarat
-                  </li>
-                  <li>
-                    <strong>Phone:</strong> +91 8460159550
-                  </li>
-                  <li>
-                    <strong>E-mail:</strong>himanshunanikwal1@gmail.com
-                  </li>
-                </ul>
-              </div>
-
-              <div className="clear"></div>
-            </div>
-          </div>
+          <About/>
 
           {/* <!-- Section Resume --> */}
           <Experience />
